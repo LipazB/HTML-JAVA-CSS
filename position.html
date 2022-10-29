@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positions</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(100, 148, 237, 0.5);
+            border: dashed 1px;
+        }
+        .po{
+            background-color: rgba(0, 100, 0, 0.5);
+            position: relative;
+            top: 30px;
+            left: 30px ;
+        }
+        .abs{
+            background-color: rgba(255, 105, 180, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        article{
+
+        }
+    </style>
+</head>
+<body>
+  <div class="box">1</div>
+  <div class="box po">2</div> 
+  <div class="box">3</div> 
+
+  <div class="box">4</div>
+  <div class="box abs">5</div> 
+  <div class="box">6</div> 
+
+  <div style="position: relative;">7
+  <div class="box">8</div>
+  <div class="box abs">9</div> 
+  <div class="box">10</div>
+
+  </div>
+
+
+</body>
+</html>

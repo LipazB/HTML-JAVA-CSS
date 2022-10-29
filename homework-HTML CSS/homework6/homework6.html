@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework6</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+   #block{
+        background-color: rgb(51, 28, 250);
+        width: 50vmin;
+        height: 50vmin;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #block > div{
+     
+    border: rgb(0, 0, 0) dashed 1px;
+    width: 20%;
+    height: 20%;
+}
+ 
+    #block > div:hover{
+        background-color: aqua;
+    }
+    
+    #block > div:hover + *{
+        background-color: rgb(90, 219, 144);
+    }
+    
+    #block > div:hover + * + *{
+        background-color: rgb(198, 241, 98);
+    }
+    
+    #block > div:hover + * + *  ~ *{
+        background-color: rgb(201, 73, 233);
+    }
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="block">
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+        </div>
+    </div>
+
+</body>
+</html>

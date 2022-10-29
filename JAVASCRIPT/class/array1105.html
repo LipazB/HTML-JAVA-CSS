@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        //targil1
+        const targil1 = ['Lipaz', 'Vladi', 'Goldi', 'Kosai']
+        alert (targil1[0])
+        alert (targil1[1])
+        alert (targil1[2])
+        alert (targil1[3])
+
+        //targil2
+        const TDA = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+
+      let table =
+        "<table>";
+      table += "<tr><td>" + TDA[0] + "</td></tr>" + "<tr><td>" + TDA[1] + "</td></tr>" + "<tr><td>" + TDA[2] + "</td></tr>";
+      table += "</tr>";
+      table += "</table>";
+      document.write(table); 
+
+      //לולאת for
+      const arr = ['dog', 'cat', 'lion', 'Tiger'];
+    for (let i = 0; i < arr.length; i++) {
+      console.log(i, arr[i]);
+    }
+
+    //targil3
+
+    function sumArray(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+    }
+    return sum;
+    }
+
+    console.log(sumArray([8, 2, 6]));
+
+
+ 
+        
+
+
+  </script>
+</body>
+</html>

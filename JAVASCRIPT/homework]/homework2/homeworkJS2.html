@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homeworkLS2</title>
+</head>
+<body>
+    
+    <script>
+        //targil 1
+        function Pythagoras(a, b){
+        let c = a*a + b*b 
+        let result = Math.pow(c,1/2)
+        return result; 
+        }
+        // targil 2
+        function Triangle(a,b){
+            let c=Pythagoras(a,b)
+            let objA={
+                a:a, 
+                b:b,
+                c:c
+            }
+            
+            return objA;
+
+        }
+
+        //targil3
+        function isRightTriangle (a,b,c){
+            let expectedC = Pythagoras(a,b)
+            if(c===expectedC)
+                return true;
+            let expectedB = Pythagoras(a,c)
+            if(b===expectedB)
+                return true;
+            let expectedA = Pythagoras(c,b)
+            if(a===expectedA)
+                return true;
+            return false;
+        }
+
+        //targil4
+        const myCar = {
+            make : 'Suzuki',
+            model : 'Baleno',
+            year : 2000,
+            owner : 'Bill Gates',
+            hand : 3,
+            print: function(){
+                let table = '<table><tr><th>Make</th><th>Model</th><th>Year</th><th>Owner</th><th>Hand</th></tr>';
+                table += '<tr><td>' + this.make + '</td><td>' + this.model + '</td><td>' + this.year + '</td><td>';
+                table += this.owner + '</td><td>' + this.hand + '</td></tr>';
+                table += '</table>';
+
+                document.write(table);
+            },
+            type: 'Sadan',
+            changeOwner: function(newOwner){
+                this.owner = newOwner;
+                this.hand +=1;
+                }
+
+        }
+        
+        //targil5
+        function Car(make, model, year, owner, hand){
+            this.make = make;
+            this.model = model; 
+            this.year = year; 
+            this.owner = owner; 
+            this.hand = hand; 
+            this.print = function() {
+                let table = '<table><tr><th>Make</th><th>Model</th><th>year</th><th>Owner</th><th>Hand</th></tr>'; 
+                table += '<tr><td>' + this.make + '</td><td>' + this.model + '</td><td>' + this.year + '</td><td>'; 
+                table += this.owner + '</td><td>' + this.hand + '</td></tr>'; 
+                table += '</table>'; 
+                document.write(tâble);
+                };                    
+                this.chageOwner = function(newOwner){
+                this.owner = newOwner;
+                this.hand += 1; 
+                };
+            }
+
+
+    </script>
+</body>
+</html>

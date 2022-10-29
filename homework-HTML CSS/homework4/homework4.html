@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    section{
+      border: 5px rgb(170, 144, 204) solid;
+      background-color: rgb(250, 248, 215);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      padding: 80px;
+    }
+    nav{
+      background-color: rgb(170, 144, 204);
+      color: aliceblue;
+      position: fixed;
+      width: 100%;
+      text-align: center;
+    }
+    a{
+      color: rgb(255, 240, 240);
+      text-decoration: none;
+      padding: 10px 30px;
+      border: 2px solid black;
+      border-left: none;
+      display: inline-block;
+    }
+    /* גורם למסגרת של האלמנט הראשון להיות שלמה גם בצד שמאל */
+    li:first-child > a{
+      border: 2px solid black;
+    }
+    li{
+      display: inline-block;
+    }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:aliceblue;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#menu{
+background-color: white;
+font-size: 40px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-weight: bold;
+
+
+}
+#ref{
+
+font-size: small;
+border:none;
+text-decoration: underline;
+padding: 10px 10px;
+margin: 0%;
+
+}
+.sidenav {
+  width: 160px; 
+  position: fixed; 
+  left: 5px;
+  background-color: rgba(17, 17, 17, 0); 
+  padding-top: 200px;
+}
+
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+.main {
+  width: 100%;
+  padding: 0px 10px;
+}
+    
+  </style>
+</head>
+<body>
+  <!-- nav>ul>li*5>a -->
+  <nav>
+    <ul>
+      <li><a href="#s1">Link 1</a>
+      </li><li><a href="#s2">Link 2</a>
+      </li><li><a href="#s3">Link 3</a>
+      </li><li><a href="#s4">Link 4</a>
+      </li><li><a href="#s5">Link 5</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <div class="sidenav"> <img src="images.jpg" alt="coffee" width="200px" height="200px"></div>
+  <section id="s1"> <h2>Section 1</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.<br> <br>
+        <div id="menu" class="dropdown"> Menu 
+            <div class="dropdown-content"> 
+                <ul>
+                    <li><a style=color:black id="ref" href="https://google.com">Google</a></li><hr>
+                    <li><a style=color:red id="ref" href="https://youtube.com">Youtube</a></li><hr>
+                    <li><a style=color:rgb(199,26,26) id="ref" href="https://Netflix.com">Netflix</a></li><hr>
+                </ul>
+            </div>
+        </div>
+    </p></section>
+  <section id="s2"> <h2>Section 2</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.<br> <br>
+        <div id="menu" class="dropdown"> Menu 
+            <div class="dropdown-content"> 
+                <ul>
+                    <li><a style=color:black id="ref" href="https://google.com">google</a></li>
+                    <li><a style=color:red id="ref" href="https://youtube.com">youtube</a></li>
+                    <li><a style=color:rgb(199,26,26) id="ref" href="https://Netflix.com">netflix</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </p></section>
+  <section id="s3"> <h2>Section 3</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.<br> <br>
+        <div id="menu" class="dropdown"> Menu 
+            <div class="dropdown-content"> 
+                <ul>
+                    <li><a style=color:black id="ref" href="https://google.com">google</a></li>
+                    <li><a style=color:red id="ref" href="https://youtube.com">youtube</a></li>
+                    <li><a style=color:rgb(199,26,26) id="ref" href="https://Netflix.com">netflix</a></li>
+                </ul>
+            </div>
+        </div></p></section>
+  <section id="s4"> <h2>Section 4</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.<br> <br>
+        <div id="menu" class="dropdown"> Menu 
+            <div class="dropdown-content"> 
+                <ul>
+                    <li><a style=color:black id="ref" href="https://google.com">google</a></li>
+                    <li><a style=color:red id="ref" href="https://youtube.com">youtube</a></li>
+                    <li><a style=color:rgb(199,26,26) id="ref" href="https://Netflix.com">netflix</a></li>
+                </ul>
+            </div>
+        </div></p></section>
+  <section id="s5"> <h2>Section 5</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, tempore! Voluptate eveniet dolore est, nulla hic labore eligendi in? Commodi veniam repellat voluptates culpa ex placeat tenetur cupiditate consequatur aliquid omnis asperiores praesentium animi corrupti veritatis est perspiciatis, minima repellendus libero. Hic ut magnam iusto nobis repellendus amet quaerat reiciendis.<br> <br>
+        <div id="menu" class="dropdown"> Menu 
+            <div class="dropdown-content"> 
+                <ul>
+                    <li><a style=color:black id="ref" href="https://google.com">google</a></li>
+                    <li><a style=color:red id="ref" href="https://youtube.com">youtube</a></li>
+                    <li><a style=color:rgb(199,26,26) id="ref" href="https://Netflix.com">netflix</a></li>
+                </ul>
+            </div>
+        </div></p></section>
+    </main>
+</body>
+</html>

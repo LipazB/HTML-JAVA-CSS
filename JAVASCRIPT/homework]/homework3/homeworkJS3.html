@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //targil1
+        function targil1(array){
+            let sumArray =[];
+            for (let i = 0; i < array.length; i++) {
+                let sum = 0;
+                for (let k = 0; k < array.length; k++) {
+                sum+= array[i][k]
+                    
+                }
+              sumArray[i] = sum  
+            }
+            return sumArray
+        }
+
+
+        //targil2
+
+        function Car(make, model, year, owner, hand){
+            this.make = make;
+            this.model = model; 
+            this.year = year; 
+            this.owner = owner; 
+            this.hand = hand; 
+            this.print = function() {
+                let table = '<table><tr><th>Make</th><th>Model</th><th>year</th><th>Owner</th><th>Hand</th></tr>'; 
+                table += '<tr><td>' + this.make + '</td><td>' + this.model + '</td><td>' + this.year + '</td><td>'; 
+                table += this.owner + '</td><td>' + this.hand + '</td></tr>'; 
+                table += '</table>'; 
+                document.write(tâble);
+                };                    
+                this.chageOwner = function(newOwner){
+                this.owner = newOwner;
+                this.hand += 1; 
+                };
+            }
+
+        const cars = [
+            new Car('Subaru', 'Impreza', 2020, 'Lipaz', 1),
+            new Car('Maserati', 'T9', 2015, 'Meir', 3),
+            new Car('toyota', 'corola', 2018, 'Adi', 0),
+            new Car('ford', 'focus', 2013, 'Liron', 2),
+            ];
+
+
+        //targil3
+        function newCar(){
+            cars.push(
+            new Car(
+                prompt('Make:'),
+                prompt('Model:'),
+                +prompt('Year:'),
+                prompt('Owner:'),
+                +prompt('Hand:'),
+                ))
+        }
+
+        //targil4
+
+
+
+
+
+
+  
+    </script>
+</body>
+</html>

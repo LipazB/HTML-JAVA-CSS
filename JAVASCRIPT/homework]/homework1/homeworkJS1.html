@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Homework JS 1</title>
+    <style>
+        td,th{
+            border: 1px solid;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let student = {
+            name: 'Lipaz',
+            average: 0,
+            greenPass: true,
+        }
+        student.grade1 = +prompt("Enter Grade 1");
+        student.grade2 = +prompt("Enter Grade 2");
+        student.grade3 = +prompt("Enter Grade 3");
+
+        student.average = (student.grade1 + student.grade2 + student.grade3)/3;
+
+        let isUnder50 = false;
+        if(student.grade1 <= 50 ) isUnder50 = true; 
+        if(student.grade2 <= 50 ) isUnder50 = true; 
+        if(student.grade3 <= 50 ) isUnder50 = true; 
+
+        let isAccess = true;
+        if(student.average <= 60 ) isAccess = false;
+        if(isUnder50) isAccess = false; 
+        if(!student.greenPass) isAccess = false; 
+
+        if(isAccess){
+            document.write('<h1 style="color:green;">You are welcome to the ceremony</h1>')
+
+        }
+        else{
+            document.write('<h1 style="color:red;">You are not authorized to participate</h1>')
+
+        }
+        document.write("<table><tr><th>Grade 1</th><th>Grade 2</th><th>Grade 3</th></tr>");document.write("<tr><td>" + student.grade1 + "</td><td>" + student.grade2 + "</td><td>" + student.grade3 + "</td></tr></table>");
+
+        if(!isAccess){
+            document.write("<h2>Reasons for your denial:</h2>");
+            document.write("<ol>");
+                if(student.average <= 60){
+                    document.write("<li>Your average is:" + student.average + ". whitch is lower than 60</li>");
+                }
+                if(isUnder50){
+                    document.write("<li>One of you grades is 50 or less</li>");
+                }
+                if(!student.greenPass){
+                    document.write("<li>No green pass</li>");
+                }
+
+            document.write("</ol>");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
